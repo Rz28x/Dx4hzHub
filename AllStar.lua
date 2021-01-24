@@ -12,8 +12,10 @@ local TimeChamber = Instance.new("TextButton")
 local KickUrself = Instance.new("TextButton")
 local Raid1 = Instance.new("TextButton")
 local close = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
 local openmain = Instance.new("Frame")
 local open = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
 
 
 ScreenGui.Parent = game.CoreGui
@@ -90,7 +92,7 @@ Summon.TextSize = 14.000
 Summon.TextStrokeTransparency = 0.000
 Summon.TextWrapped = true
 Summon.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-687, 77.7458038, -261.211487, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-687, 67.0000458, -250.998596, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 end)
 
 Trial1.Name = "Trial1"
@@ -230,6 +232,9 @@ close.MouseButton1Down:connect(function()
 	openmain.Visible = true
 end) 
 
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = main
+
 openmain.Name = "openmain"
 openmain.Parent = ScreenGui
 openmain.BackgroundColor3 = Color3.fromRGB(69, 69, 69)
@@ -255,5 +260,7 @@ open.TextWrapped = true
 open.MouseButton1Down:connect(function()
 	openmain.Visible = false
 	main.Visible = true
-
 end)
+
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = openmain
