@@ -1,5 +1,5 @@
 local key = _G.Key
-local check = "https://github.com/Rz28x/Dx4hzHub/blob/main/check.php" .. key
+local check = "https://github.com/Rz28x/Dx4hzHub/blob/main/check.php?key" .. key
 if game:HttpGet(check) == "Whitelisted" then
 loadstring(game:HttpGet("https://github.com/Rz28x/Dx4hzHub/blob/main/script.lua"))()
 else
